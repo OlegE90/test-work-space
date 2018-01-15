@@ -69,8 +69,8 @@
 
 //import * as React from 'react';
 
-let someFunction = () => {
-  let variable = 221 + 90;
+var someFunction = () => {
+  let variable = 213 + 90;
   alert(variable);
 };
 

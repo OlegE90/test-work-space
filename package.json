@@ -1,5 +1,5 @@
 {
-  "name": "pagination",
+  "name": "test-work-space",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,8 +12,10 @@
     "webpack-dev-server": "^2.11.0"
   },
   "scripts": {
-    "dev": "webpack-dev-server --env.dev",
-    "build": "webpack -p --env.prod"
+    "prebuild": "rimraf dist",
+    "build": "webpack --env.prod",
+    "dev": "webpack-dev-server --env.dev"
+
   },
   "author": "OlegE",
   "license": "ISC"
