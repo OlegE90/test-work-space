@@ -5,34 +5,48 @@ webpackJsonp([0],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__root_jsx__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__helpers__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_assets_styles_main_less__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_assets_styles_main_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_assets_styles_main_less__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_dom__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_components_root_jsx__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__helpers__ = __webpack_require__(30);
 
 
 
 
 
 
-Object(__WEBPACK_IMPORTED_MODULE_3__helpers__["a" /* find */])();
-Object(__WEBPACK_IMPORTED_MODULE_3__helpers__["b" /* findAll */])();
+
+
+Object(__WEBPACK_IMPORTED_MODULE_4__helpers__["a" /* find */])();
+Object(__WEBPACK_IMPORTED_MODULE_4__helpers__["b" /* findAll */])();
 console.log("Running App version " + "5fa3b9");
 
-__WEBPACK_IMPORTED_MODULE_1_react_dom__["render"](__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2__root_jsx__["a" /* Root */], { name: 'Taylor' }), document.getElementById('root'));
+__WEBPACK_IMPORTED_MODULE_2_react_dom__["render"](__WEBPACK_IMPORTED_MODULE_1_react__["createElement"](__WEBPACK_IMPORTED_MODULE_3_components_root_jsx__["a" /* Root */], { name: 'Taylor' }), document.getElementById('root'));
 
-if (false) {
-    module.hot.accept('./root.jsx', () => {
-        const NewRoot = require('./root.jsx').default;
-        ReactDOM.render(React.createElement(Root, { name: 'Taylor' }), document.getElementById('root'));
-    });
-}
+// if (module.hot) {
+//     module.hot.accept('components/root.jsx', () => {
+//         const NewRoot = require('components/root.jsx').default;
+//         ReactDOM.render(
+//             <Root name="Taylor" />,
+//             document.getElementById('root')
+//         );
+//     });
+// }
 
 /***/ }),
 
-/***/ 27:
+/***/ 15:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 29:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -75,7 +89,7 @@ class Root extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
 
 /***/ }),
 
-/***/ 28:
+/***/ 30:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

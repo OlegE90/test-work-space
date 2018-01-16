@@ -1,12 +1,10 @@
+import 'assets/styles/main.less';
+
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import {Root} from './root.jsx'
+import {Root} from 'components/root.jsx'
 import {find, findAll} from './helpers'
-
-find();
-findAll();
-console.log("Running App version " + VERSION);
 
 ReactDOM.render(
     <Root name="Taylor" />,
@@ -14,8 +12,8 @@ ReactDOM.render(
 );
 
 if (module.hot) {
-    module.hot.accept('./root.jsx', () => {
-        const NewRoot = require('./root.jsx').default;
+    module.hot.accept('components/root.jsx', () => {
+        const NewRoot = require('components/root.jsx').default;
         ReactDOM.render(
             <Root name="Taylor" />,
             document.getElementById('root')

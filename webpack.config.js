@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = (env) => ({
     target: 'web',
@@ -18,7 +19,7 @@ module.exports = (env) => ({
     },
     module: {
         rules: [
-            // Rules for JS / JSX
+            // Rules for JSX
             {
                 test: /\.jsx$/,
                 loader: 'babel-loader',
@@ -31,12 +32,54 @@ module.exports = (env) => ({
                         'react'
                     ]
                 }
-            }
-        ]
+            },
+            // Rules for Style Sheets
+            {
+                test: /\.(css|less|styl|scss|sass|sss)$/,
+                rules: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: [
+                        // Apply PostCSS plugins including autoprefixer
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                config: {
+                                    path: './tools/postcss.config.js',
+                                },
+                            },
+                        },
+                        {
+                            test: /\.css$/,
+                            include: path.resolve('src'),
+                            loader: 'css-loader',
+                            options: {
+                                // CSS Loader https://github.com/webpack/css-loader
+                                importLoaders: 1,
+                                sourceMap: env.dev,
+                                // CSS Modules https://github.com/css-modules/css-modules
+                                modules: true,
+                                localIdentName: env.dev
+                                    ? '[name]-[local]-[hash:base64:5]'
+                                    : '[hash:base64:5]',
+                                // CSS Nano http://cssnano.co/
+                                minimize: env.dev ? false : {
+                                    discardComments: {removeAll: true},
+                                }
+                            },
+                        },
+                        {
+                            test: /\.less$/,
+                            loader: 'less-loader',
+                        }
+                    ]
+                    
+                })
+            }]
     },
     plugins: [
+        new ExtractTextPlugin('[name].[contenthash].css'),
         new HtmlWebpackPlugin({
-            template: path.resolve('assets/index.html'),
+            template: path.resolve('src/assets/index.html'),
             filename: 'index.html',
             inject: 'body'
         }),
@@ -50,7 +93,6 @@ module.exports = (env) => ({
             minChunks: module => /node_modules/.test(module.resource),
         }),
         ...(env.prod ? [] : [
-            
             // https://github.com/webpack/webpack/blob/master/examples/scope-hoisting/README.md
             new webpack.optimize.ModuleConcatenationPlugin(),
             // https://github.com/mishoo/UglifyJS2#compressor-options
