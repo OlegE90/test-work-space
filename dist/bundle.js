@@ -1,95 +1,133 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/dist/";
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports) {
+webpackJsonp([0],{
 
-//import * as React from 'react';
+/***/ 14:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-var someFunction = () => {
-  let variable = 213 + 90;
-  alert(variable);
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__root_jsx__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__helpers__ = __webpack_require__(28);
+
+
+
+
+
+
+Object(__WEBPACK_IMPORTED_MODULE_3__helpers__["a" /* find */])();
+Object(__WEBPACK_IMPORTED_MODULE_3__helpers__["b" /* findAll */])();
+console.log("Running App version " + "5fa3b9");
+
+__WEBPACK_IMPORTED_MODULE_1_react_dom__["render"](__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2__root_jsx__["a" /* Root */], { name: 'Taylor' }), document.getElementById('root'));
+
+if (false) {
+    module.hot.accept('./root.jsx', () => {
+        const NewRoot = require('./root.jsx').default;
+        ReactDOM.render(React.createElement(Root, { name: 'Taylor' }), document.getElementById('root'));
+    });
+}
+
+/***/ }),
+
+/***/ 27:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+
+
+class Root extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
+    render() {
+        return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](
+            "div",
+            null,
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](
+                "h1",
+                null,
+                "Hello ",
+                this.props.name
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](
+                "form",
+                null,
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text" }),
+                " ",
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text" }),
+                " ",
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text" }),
+                " ",
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { type: "text" }),
+                " ",
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null)
+            )
+        );
+    }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Root;
+
+
+/***/ }),
+
+/***/ 28:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+const remove = () => {
+
 };
+/* unused harmony export remove */
 
-someFunction();
-// class HelloMessage extends React.Component {
-//     render() {
-//         return (
-//             <div>
-//                 Hello {this.props.name}
-//             </div>
-//         );
-//     }
-// }
-//
-// ReactDOM.render(
-//     <HelloMessage name="Taylor" />,
-//     document.getElementById('main')
-// );
+
+const add = () => {
+
+};
+/* unused harmony export add */
+
+
+const update = () => {
+
+};
+/* unused harmony export update */
+
+
+const find = () => {
+
+};
+/* harmony export (immutable) */ __webpack_exports__["a"] = find;
+
+
+const findAll = () => {
+
+};
+/* harmony export (immutable) */ __webpack_exports__["b"] = findAll;
+
+
+const findOne = () => {
+
+};
+/* unused harmony export findOne */
+
+
+const date = () => {
+
+};
+/* unused harmony export date */
+
+
+const reset = () => {
+
+};
+/* unused harmony export reset */
+
 
 /***/ })
-/******/ ]);
+
+},[14]);
 //# sourceMappingURL=bundle.js.map
