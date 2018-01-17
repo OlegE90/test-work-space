@@ -27,8 +27,7 @@ const reducer = combineReducers<{}>({
             case types.UPDATE_DATA:
                 return {
                     ...state.form,
-                    ...action.data,
-                    field2: '2342342'
+                    ...action.data
                 };
             default:
                 return state.form;
