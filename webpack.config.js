@@ -31,9 +31,8 @@ module.exports = (env) => ({
                         ],
                         options: {
                             babelrc: false,
-                            presets: [
-                                'react'
-                            ]
+                            presets: ['react'],
+                            plugins: ['babel-plugin-transform-object-rest-spread']
                         }
                     },
                     {
