@@ -18,8 +18,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 __WEBPACK_IMPORTED_MODULE_2_react_dom__["render"](__WEBPACK_IMPORTED_MODULE_1_react__["createElement"](__WEBPACK_IMPORTED_MODULE_3_components_root__["a" /* Root */], { name: 'Taylor' }), document.getElementById('root'));
 if (false) {
-    module.hot.accept('components/root.jsx', () => {
-        const NewRoot = require('components/root.jsx').default;
+    module.hot.accept('components/root', () => {
+        const NewRoot = require('components/root').default;
         ReactDOM.render(React.createElement(Root, { name: 'Taylor' }), document.getElementById('root'));
     });
 }
