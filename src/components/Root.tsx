@@ -1,9 +1,8 @@
 import * as React from 'react';
 
 import Form from 'components/Form';
-/**
- * Свойства компонента.
- */
+
+
 interface IProps {
     name: string;
 }

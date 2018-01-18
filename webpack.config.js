@@ -45,9 +45,10 @@ module.exports = (env) => ({
             // Rules for Style Sheets
             {
                 test: /\.(css|less|styl|scss|sass|sss)$/,
-                rules: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [
+                rules:[
+                        {
+                            loader: 'style-loader',
+                        },
                         // Apply PostCSS plugins including autoprefixer
                         {
                             loader: 'postcss-loader',
@@ -81,12 +82,10 @@ module.exports = (env) => ({
                             loader: 'less-loader',
                         }
                     ]
-                    
-                })
             }]
     },
     plugins: [
-        new ExtractTextPlugin('[name].[contenthash].css'),
+   //     new ExtractTextPlugin('[name].[contenthash].css'),
         new HtmlWebpackPlugin({
             template: path.resolve('src/assets/index.html'),
             filename: 'index.html',

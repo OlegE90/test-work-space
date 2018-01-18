@@ -2,20 +2,7 @@ import * as React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
-import * as types from 'actionTypes';
-
-import {IForm} from '../reducers'
-
-function updateData (data: IForm) {
-    return function (dispatch: any) {
-        // thunks allow for pre-processing actions, calling apis, and dispatching multiple actions
-        // in this case at this point we could call a service that would persist the fuel savings
-        return dispatch({
-            type: types.UPDATE_DATA,
-            data
-        });
-    };
-}
+import {IForm, updateData} from 'redux/form'
 
 interface IProps {
     actions: any,
@@ -38,7 +25,6 @@ class Form extends React.Component<IProps, IState> {
     }
 
     componentWillReceiveProps(newProps: IProps) {
-        console.log(newProps.form);
         this.setState({
             form: {...newProps.form}
         });
@@ -64,8 +50,11 @@ class Form extends React.Component<IProps, IState> {
 
         return (
             <div>
-                <form>
-                    <input value={form && form.field1} onChange={this.handleChangeField} type="text"/>
+                <form className="mainForm">
+                    <span>Ваше имя</span>
+                    <div className="field">
+                        <input value={form && form.field1} onChange={this.handleChangeField} type="text"/>
+                    </div>
                 </form>
             </div>
         );
